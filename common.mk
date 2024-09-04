@@ -355,6 +355,7 @@ PRODUCT_PACKAGES += \
     libshim_camera_metadata \
     libexpat.vendor \
     libunwindstack.vendor \
+    libchrome.vendor \
     libcurl.vendor \
     libexif.vendor \
     libdng_sdk.vendor \
