@@ -256,6 +256,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworksResCommon \
+<<<<<<< HEAD
+=======
+    PowerOffAlarmOverlayCommon \
+    SettingsResOverlayCommon \
+>>>>>>> bf80358 (mt6789-common: overlay: Configure default PowerOffAlarm driver)
     SystemUIResCommon \
     TelephonyResCommon
 
