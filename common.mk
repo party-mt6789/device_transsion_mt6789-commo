@@ -51,7 +51,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.sounddose-vendor-impl \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
@@ -78,7 +77,6 @@ PRODUCT_PACKAGES += \
     libprocessgroup.vendor
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
@@ -118,8 +116,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor \
-    libdrm.vendor \
-    libutils-v32
+    libdrm.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -136,10 +133,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
-
-# FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio
     
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -272,8 +265,6 @@ PRODUCT_PACKAGES += \
     
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/hiddenapi-package-allowlist-product.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/hiddenapi-package-allowlist-product.xml \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-gms.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-gms.xml \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -356,8 +347,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio@1.6.vendor \
-    libprotobuf-cpp-full.vendor \
-    libprotobuf-cpp-lite.vendor \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
@@ -367,7 +356,6 @@ PRODUCT_PACKAGES += \
     libexpat.vendor \
     libunwindstack.vendor \
     libcurl.vendor \
-    libutilscallstack.vendor \
     libexif.vendor \
     libdng_sdk.vendor \
     liblz4.vendor \
@@ -385,6 +373,7 @@ PRODUCT_PACKAGES += \
     libhidlbase_shim \
     libruy.vendor \
     libpcap.vendor \
+    libsqlite.vendor \
     libtextclassifier_hash.vendor \
     libutilscallstack.vendor \
     libziparchive.vendor \
@@ -435,7 +424,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstagefright_foundation-v33 \
     libhidlbase-v32 \
-    libbinder-v32 
+    libbinder-v32 \
+    libutils-v32
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
@@ -443,8 +433,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     wpa_supplicant \
     hostapd \
-    libkeystore-wifi-hidl:64 \
-    libkeystore-engine-wifi-hidl:64
+    libkeystore-wifi-hidl \
+    libkeystore-engine-wifi-hidl
     
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
